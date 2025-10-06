@@ -15,6 +15,7 @@ public class Array01 {
         for(int a :arr){
             System.out.println(a);
         }
+        System.out.println("the program is end");
 
     }
     
