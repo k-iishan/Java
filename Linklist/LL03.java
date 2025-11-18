@@ -1,25 +1,31 @@
+package Linklist;
+
 public class LL03 {
-    class Node{
+
+    class Node {
         int val;
         Node next;
-        Node head;
-        Node tail;
 
-        public Node(int val){
-            this.val = val ;
-            this.next = null;
-           
+        Node(int x ){
+            this.val = x;
+        }
 
+        public static void printLL(Node head){
+         Node temp =  head ;
+         while (temp !=null) 
+         {
+         System.out.println(temp.val); 
+         temp = temp.next;  
+         }
         }
-        public Node(int val , Node next){
-            this.val = val ;
-            this.next = next;
-            
-        }
-        
     }
     public static void main(String[] args) {
-        Node a = new Node(24);
-        System.out.println();
+        Node a = new Node(12);
+        Node b = new Node(65);
+        Node c = new Node(73);
+        a.next = b;
+        b.next = c;
+
+        printLL(a);
     }
 }
